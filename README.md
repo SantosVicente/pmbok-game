@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# PMBoK Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto básico desenvolvido para um seminário sobre PMBoK (Project Management Body of Knowledge).
 
-Currently, two official plugins are available:
+## O Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O **PMBoK Game** é um jogo interativo com 2 fases inspirados no Conexo e Termo que busca ensinar conceitos do PMBoK de forma divertida e engajante:
 
-## React Compiler
+### Fase 1: Conexões (Conexoes)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Combine 4 tiles com 4 categorias do PMBoK. Para cada categoria errada, você recebe uma dica.
 
-## Expanding the ESLint configuration
+### Fase 2: Dueto (Termo)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Adivinhe 4 palavras-chave relacionadas ao PMBoK em 9 tentativas. As letras corretas, presentes e ausentes são destacadas.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React** com TypeScript
+- **Vite** para build rápido
+- **Tailwind CSS** para estilização
+- **GSAP** para animações suaves
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Como Executar
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estrutura do Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── App.tsx                 # Orquestrador de fases
+├── components/             # Componentes reutilizáveis
+├── phases/
+│   ├── PhaseOneConexo.tsx  # Fase 1: Conexões
+│   ├── PhaseTwoTermo.tsx   # Fase 2: Dueto (orquestrador)
+│   └── termo/              # Componentes específicos do Dueto
+├── game/                   # Dados e tipos do jogo
+```
+
+---
+
+Projeto simples para fins educacionais em seminário.
