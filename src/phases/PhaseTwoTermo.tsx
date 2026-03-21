@@ -1,16 +1,17 @@
-import type { GuessEvaluation } from "./termo/utils";
+import type { GuessEvaluation } from "./utils";
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { FinishOverlay } from "../components/FinishOverlay";
-import { GuessGrid } from "./termo/GuessGrid";
-import { GameControls } from "./termo/GameControls";
-import { GameFeedback } from "./termo/GameFeedback";
+import { LossOverlay } from "../components/LossOverlay";
+import { GuessGrid } from "../components/GuessGrid";
+import { GameControls } from "../components/GameControls";
+import { GameFeedback } from "../components/GameFeedback";
 import {
   MAX_ATTEMPTS,
   WORD_LENGTH,
   getRandomWords,
   evaluateGuess,
-} from "./termo/utils";
+} from "./utils";
 
 type PhaseTwoTermoProps = {
   onRestartFromPhaseOne: () => void;
@@ -260,12 +261,12 @@ export function PhaseTwoTermo({ onRestartFromPhaseOne }: PhaseTwoTermoProps) {
           wordLength={WORD_LENGTH}
         />
 
-        <GameFeedback
-          feedback={feedback}
-          hasLost={hasLost}
-          targetWords={targetWords}
-        />
+        <GameFeedback feedback={feedback} />
       </div>
+
+      {hasLost && (
+        <LossOverlay targetWords={targetWords} onRestartPhase={reset} />
+      )}
 
       {hasWon && (
         <FinishOverlay onRestartFromPhaseOne={onRestartFromPhaseOne} />

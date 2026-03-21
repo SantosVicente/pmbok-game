@@ -45,7 +45,6 @@ export function GuessGrid({
   guessRowsRef,
   gridRef,
 }: GuessGridProps) {
-  // Shake animation quando perde
   useEffect(() => {
     if (!hasLost || !gridRef.current) return;
 
