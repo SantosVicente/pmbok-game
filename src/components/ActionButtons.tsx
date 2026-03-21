@@ -22,14 +22,14 @@ export function ActionButtons({
       <button
         onClick={onShowHint}
         disabled={isHintDisabled}
-        className={`btn-ghost ${isHintDisabled ? "cursor-not-allowed!" : "cursor-pointer!"} rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-[120px]`}
+        className={`btn-ghost ${isHintDisabled ? "cursor-not-allowed!" : "cursor-pointer!"} rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-30`}
         type="button"
       >
         💡 Dica
       </button>
       <button
         onClick={onClear}
-        className="btn-ghost rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-[120px]"
+        className="btn-ghost rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-30"
         disabled={selectedCount === 0}
         type="button"
       >
@@ -37,7 +37,7 @@ export function ActionButtons({
       </button>
       <button
         onClick={onSubmit}
-        className="btn-primary rounded-xl px-6 sm:px-8 py-2.5 text-sm min-w-[150px]"
+        className="btn-primary rounded-xl px-6 sm:px-8 py-2.5 text-sm min-w-37.5"
         disabled={selectedCount !== 4 || won}
         type="button"
       >
@@ -45,7 +45,7 @@ export function ActionButtons({
       </button>
       <button
         onClick={onReset}
-        className="btn-ghost rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-[120px]"
+        className="btn-ghost rounded-xl px-4 sm:px-5 py-2.5 text-sm min-w-30"
         type="button"
       >
         🔄

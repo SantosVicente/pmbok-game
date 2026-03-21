@@ -29,7 +29,7 @@ export default function App() {
       <ParticleCanvas />
 
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[38rem] h-[20rem] md:w-[45rem] md:h-[24rem] pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-152 h-80 md:w-180 md:h-96 pointer-events-none"
         style={{
           background:
             "radial-gradient(ellipse, rgba(139,92,246,0.12) 0%, transparent 70%)",
