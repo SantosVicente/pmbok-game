@@ -1,4 +1,4 @@
-import type { GuessEvaluation } from "./utils";
+import type { GuessEvaluation } from "../game/termo-utils";
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { FinishOverlay } from "../components/FinishOverlay";
@@ -11,7 +11,7 @@ import {
   WORD_LENGTH,
   getRandomWords,
   evaluateGuess,
-} from "./utils";
+} from "../game/termo-utils";
 
 type PhaseTwoTermoProps = {
   onRestartFromPhaseOne: () => void;
