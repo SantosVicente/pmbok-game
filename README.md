@@ -4,15 +4,19 @@ Um projeto básico desenvolvido para um seminário sobre PMBoK (Project Manageme
 
 ## O Projeto
 
-O **PMBoK Game** é um jogo interativo com 2 fases inspirados no Conexo e Termo que busca ensinar conceitos do PMBoK de forma divertida e engajante:
+O **PMBoK Game** é um jogo interativo com 3 fases inspirados no Conexo, Termo e Speeling Bee que busca ensinar conceitos do PMBoK de forma divertida e engajante:
 
-### Fase 1: Conexões (Conexoes)
+### Fase 1: Conexo
 
 Combine 4 tiles com 4 categorias do PMBoK. Para cada categoria errada, você recebe uma dica.
 
-### Fase 2: Dueto (Termo)
+### Fase 2: Quarteto (Termo)
 
 Adivinhe 4 palavras-chave relacionadas ao PMBoK em 9 tentativas. As letras corretas, presentes e ausentes são destacadas.
+
+### Fase 3: Spelling Bee
+
+Forme palavras usando uma letra obrigatória e 6 letras adicionais. Cada palavra correta revela mais do PMBoK.
 
 ## Tecnologias
 

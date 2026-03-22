@@ -3,17 +3,19 @@ import "./App.css";
 import { ParticleCanvas } from "./components/ParticleCanvas";
 import { PhaseOneConexo } from "./phases/PhaseOneConexo";
 import { PhaseTwoTermo } from "./phases/PhaseTwoTermo";
+import { PhaseThreeSpellingBee } from "./phases/PhaseThreeSpellingBee";
 
 export default function App() {
   const [currentPhase, setCurrentPhase] = useState(1);
 
   const phaseLabel = useMemo(() => {
-    if (currentPhase === 1) return "Fase 1 de 2";
-    return "Fase 2 de 2";
+    if (currentPhase === 1) return "Fase 1 de 3";
+    if (currentPhase === 2) return "Fase 2 de 3";
+    return "Fase 3 de 3";
   }, [currentPhase]);
 
   const nextPhase = () => {
-    setCurrentPhase((prev) => Math.min(2, prev + 1));
+    setCurrentPhase((prev) => Math.min(3, prev + 1));
   };
 
   const restartFromPhaseOne = () => {
@@ -44,8 +46,9 @@ export default function App() {
       </div>
 
       {currentPhase === 1 && <PhaseOneConexo onNextPhase={nextPhase} />}
-      {currentPhase === 2 && (
-        <PhaseTwoTermo onRestartFromPhaseOne={restartFromPhaseOne} />
+      {currentPhase === 2 && <PhaseTwoTermo onNextPhase={nextPhase} />}
+      {currentPhase === 3 && (
+        <PhaseThreeSpellingBee onRestartFromPhaseOne={restartFromPhaseOne} />
       )}
     </div>
   );
