@@ -19,12 +19,14 @@ export function WinOverlay({ attempts, nextPhase }: WinOverlayProps) {
           boxShadow: "0 0 80px rgba(139,92,246,0.4)",
         }}
       >
-        <div style={{ fontSize: 60 }}>🏆</div>
         <h2 className="text-3xl font-extrabold text-white mt-5 mb-1">
           Parabéns!
         </h2>
+        <div className="justify-center flex items-center gap-2 mb-4">
+          <img src={"orange-tulip.png"} className="size-48" />
+        </div>
         <p className="text-white/50 text-sm mb-2">
-          Você acertou todas as categorias
+          Você ganhou um buquê de Tulipas Laranjas!
         </p>
         <p className="text-purple-300 font-semibold text-sm mb-6">
           {attempts === 0

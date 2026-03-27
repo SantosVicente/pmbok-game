@@ -49,9 +49,15 @@ export function PhaseAdvanceOverlay({ onNextPhase }: PhaseAdvanceOverlayProps) {
           boxShadow: "0 0 80px rgba(139,92,246,0.4)",
         }}
       >
-        <div style={{ fontSize: 56 }}>🚀</div>
-        <h2 className="text-3xl font-extrabold text-white mt-5 mb-1">Boa!</h2>
+        <h2 className="text-3xl font-extrabold text-white mt-5 mb-1">
+          Mandou Bem!
+        </h2>
+        <div className="justify-center flex items-center gap-2 mb-4">
+          <img src={"purple-tulip.png"} className="size-48" />
+        </div>
         <p className="text-white/60 text-sm pb-3">
+          Você ganhou um buquê de Tulipas Roxas!
+          <br />
           Fase 2 concluida. Vamos para a última fase.
         </p>
         <button

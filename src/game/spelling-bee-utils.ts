@@ -7,7 +7,7 @@ export type SpellingBeeRound = {
 
 export const BEE_MIN_LENGTH = 4;
 export const BEE_MAX_LENGTH = 9;
-export const BEE_WIN_RATIO = 0.75;
+export const BEE_WIN_RATIO = 0.7;
 
 export const SPELLING_BEE_ROUNDS: SpellingBeeRound[] = [
   {
@@ -23,7 +23,6 @@ export const SPELLING_BEE_ROUNDS: SpellingBeeRound[] = [
       "PRECO",
       "RECESSO",
       "POSSE",
-      "SUPER",
       "PESOS",
       "ERROS",
     ],
