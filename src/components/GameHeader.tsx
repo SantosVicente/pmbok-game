@@ -16,7 +16,7 @@ export function GameHeader({ titleRef, subtitleRef }: GameHeaderProps) {
         <span className="text-purple-400">Play</span>MBoK
       </h1>
       <p ref={subtitleRef} className="text-sm text-center text-white/40 w-full">
-        Agrupe os 4 conceitos que pertencem à mesma área do conhecimento do
+        Agrupe os 4 conceitos que pertencem ao mesmo Domínio de Desempenho do
         PMBoK.
       </p>
     </div>

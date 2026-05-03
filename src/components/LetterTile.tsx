@@ -43,7 +43,7 @@ export function LetterTile({ letter, state, hasSolved }: LetterTileProps) {
   return (
     <div
       ref={tileRef}
-      className={`h-11 rounded-xl border flex items-center justify-center font-extrabold text-base transition-all duration-200 cursor-default hover:scale-110 hover:shadow-lg ${getStateClass()}`}
+      className={`h-11 rounded-xl border flex items-center justify-center text-2xl  leading-tight transition-all duration-200 cursor-default hover:scale-110 hover:shadow-lg ${getStateClass()}`}
       style={{
         perspective: "1000px",
       }}

@@ -1,4 +1,4 @@
-export type CategoryId = "integration" | "scope" | "schedule" | "risk";
+export type CategoryId = "stakeholders" | "governance" | "schedule" | "risk";
 
 export type CategoryColor = "purple" | "green" | "yellow" | "red";
 

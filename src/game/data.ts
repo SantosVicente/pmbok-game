@@ -2,20 +2,20 @@ import type { CategoryId, CategoryMeta, GameItem } from "./types";
 
 export const HINT_BANK: Record<CategoryId, { title: string; clues: string[] }> =
   {
-    integration: {
-      title: "Integração",
+    stakeholders: {
+      title: "Partes Interessadas",
       clues: [
-        "Pense nos artefatos que conectam o projeto de ponta a ponta.",
-        "Inclui governança geral: abertura, plano consolidado e mudanças.",
-        "Pergunta-guia: o que mantém todas as áreas alinhadas?",
+        "O foco aqui é entender quem tem interesse no projeto.",
+        "Procure por termos relacionados a pessoas, grupos ou organizações.",
+        "Pergunta-guia: quais itens descrevem quem é afetado ou tem poder?",
       ],
     },
-    scope: {
-      title: "Escopo",
+    governance: {
+      title: "Governança",
       clues: [
-        "A ideia central é identificar o que será entregue e seus limites.",
-        "Procure termos ligados a requisitos e decomposicao de trabalho.",
-        "Pergunta-guia: quais itens descrevem entregas e limites?",
+        "Aqui o tema é controle, regras e autoridade.",
+        "Procure por palavras que indiquem direção, monitoramento ou conformidade.",
+        "Pergunta-guia: quais itens falam sobre como o projeto é dirigido e monitorado?",
       ],
     },
     schedule: {
@@ -65,16 +65,16 @@ export const COLORS = {
 
 export const CATEGORY_META: CategoryMeta[] = [
   {
-    id: "integration",
-    label: "Gerenciamento da Integração",
+    id: "stakeholders",
+    label: "Partes Interessadas",
     color: "purple",
-    emoji: "🔗",
+    emoji: "🤝",
   },
   {
-    id: "scope",
-    label: "Gerenciamento do Escopo",
+    id: "governance",
+    label: "Gerenciamento da Governança",
     color: "green",
-    emoji: "📐",
+    emoji: "🛡️",
   },
   {
     id: "schedule",
@@ -86,29 +86,29 @@ export const CATEGORY_META: CategoryMeta[] = [
 ];
 
 export const ALL_ITEMS: GameItem[] = [
-  // Integração (O que une o projeto)
-  { id: 1, text: "Autorização", category: "integration" },
-  { id: 2, text: "Mudanças", category: "integration" },
-  { id: 3, text: "Encerramento", category: "integration" },
-  { id: 4, text: "Visão Geral", category: "integration" },
+  // Partes Interessadas (Stakeholders)
+  { id: 1, text: "Engajamento", category: "stakeholders" },
+  { id: 2, text: "Expectativas", category: "stakeholders" },
+  { id: 3, text: "Investimento", category: "stakeholders" },
+  { id: 4, text: "Patrocinador", category: "stakeholders" },
 
-  // Escopo (O que será entregue)
-  { id: 5, text: "Decomposição", category: "scope" },
-  { id: 6, text: "Entregas", category: "scope" },
-  { id: 7, text: "Requisitos", category: "scope" },
-  { id: 8, text: "Limites", category: "scope" },
+  // Governança (O que será entregue)
+  { id: 5, text: "Autoridade", category: "governance" },
+  { id: 6, text: "Requisitos", category: "governance" },
+  { id: 7, text: "Políticas", category: "governance" },
+  { id: 8, text: "Auditoria", category: "governance" },
 
   // Cronograma (O tempo)
   { id: 9, text: "Prazos", category: "schedule" },
-  { id: 10, text: "Marcos", category: "schedule" },
-  { id: 11, text: "Datas", category: "schedule" },
-  { id: 12, text: "Atividades", category: "schedule" },
+  { id: 10, text: "Sprint", category: "schedule" },
+  { id: 11, text: "Tarefas", category: "schedule" },
+  { id: 12, text: "Datas", category: "schedule" },
 
   // Riscos (Incertezas e Respostas)
   { id: 13, text: "Ameaças", category: "risk" },
   { id: 14, text: "Oportunidades", category: "risk" },
-  { id: 15, text: "Incertezas", category: "risk" },
-  { id: 16, text: "Contingência", category: "risk" },
+  { id: 15, text: "Forças", category: "risk" },
+  { id: 16, text: "Fraquezas", category: "risk" },
 ];
 
 export function shuffle<T>(arr: readonly T[]): T[] {
